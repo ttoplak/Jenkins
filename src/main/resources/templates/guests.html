@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landol Hotel: Guests</title>
+</head>
+<body>
+<h1>Welcome to the Guests Page</h1>
+<table>
+    <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Email Address</td>
+        <td>Phone Number</td>
+    </tr>
+    <tr th:each="guest: ${guestsData}">
+        <td th:text="${guest.firstName}">First Name</td>
+        <td th:text="${guest.lastName}">Last Name</td>
+        <td th:text="${guest.emailAddress}">Email Address</td>
+        <td th:text="${guest.phoneNumber}">Phone Number</td>
+    </tr>
+</table>
+
+</body>
+</html>
